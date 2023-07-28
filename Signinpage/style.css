@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #f2ecec;
+  color: #131111;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#right {
+  flex: 1;
+}
+
+/* Sign In */
+#signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 1rem;
+}
+
+#signin form {
+  width: 80%;
+  padding-bottom: 3rem;
+}
+
+#signin .logo {
+  margin-bottom: 8vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#signin .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+#signin label {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+#signin .text-input {
+  margin-bottom: 1.3rem;
+  width: 100%;
+  border-radius: 2px;
+  background: white;
+  border: 1px solid #555;
+  color: #0c0b0b;
+  padding: 0.5rem 1rem;
+  line-height: 1.3rem;
+}
+
+#signin .primary-btn {
+  width: 100%;
+}
+
+#signin .secondary-btn,
+.or,
+.links {
+  width: 60%;
+}
+
+#signin .links a {
+  display: block;
+  color: #0e0d0d;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#signin .or {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+#signin .or .bar {
+  flex: auto;
+  border: none;
+  height: 1px;
+  background: #2c2929;
+}
+
+#signin .or span {
+  color: #2c2929;
+  padding: 0 0.8rem;
+}
+
+/* Showcase */
+#showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
+  height: 100vh;
+  text-align: center;
+}
+
+#showcase .showcase-text {
+  font-size: 3rem;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+#showcase .secondary-btn {
+  width: 60%;
+  margin: auto;
+}
+#showcase .secondary-btn-sh {
+  width: 60%;
+  margin: auto;
+}
+/* Footer */
+#main-footer {
+  color: #110404;
+  text-align: center;
+  font-size: 0.8rem;
+  max-width: 80%;
+  padding-top: 5rem;
+}
+
+#main-footer a {
+  color: #140c07;
+  text-decoration: underline;
+}
+
+/* Button */
+.primary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 500;
+  background: #111111;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.primary-btn:hover {
+  background-color: #832828;
+}
+
+.secondary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 1px solid #2c2929;
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: #2c2929;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+.secondary-btn-sh {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+.secondary-btn:hover {
+  border-color: #832828;
+  color: #832828;
+}
+.secondary-btn-sh:hover {
+  border-color: #832828;
+  color: #832828;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  #left {
+    flex: 4;
+  }
+
+  #right {
+    flex: 6;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  #right {
+    display: none;
+  }
+
+  #left {
+    justify-content: start;
+    margin-top: 4vh;
+  }
+
+  #signin .logo {
+    margin-bottom: 2vh;
+  }
+
+  #signin .text-input {
+    margin-bottom: 0.7rem;
+  }
+
+  #main-footer {
+    padding-top: 1rem;
+  }
+}
